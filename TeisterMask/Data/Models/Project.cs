@@ -7,6 +7,11 @@ namespace TeisterMask.Data.Models
 {
     public class Project
     {
+        public Project()
+        {
+            this.Tasks = new HashSet<Task>();
+        }
+
         public int Id { get; set; }
 
         [Required]

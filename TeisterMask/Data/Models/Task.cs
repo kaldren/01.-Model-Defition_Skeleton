@@ -7,6 +7,11 @@ namespace TeisterMask.Data.Models
 {
     public class Task
     {
+        public Task()
+        {
+            this.EmployeesTasks = new HashSet<EmployeeTask>();
+        }
+
         public int Id { get; set; }
 
         [Required]
@@ -31,6 +36,6 @@ namespace TeisterMask.Data.Models
 
         public Project Project { get; set; }
 
-        public ICollection<EmployeeTask> EmployeeTasks { get; set; }
+        public ICollection<EmployeeTask> EmployeesTasks { get; set; }
     }
 }

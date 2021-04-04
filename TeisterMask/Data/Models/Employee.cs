@@ -7,6 +7,11 @@ namespace TeisterMask.Data.Models
 {
     public class Employee
     {
+        public Employee()
+        {
+            this.EmployeesTasks = new HashSet<EmployeeTask>();
+        }
+
         public int Id { get; set; }
 
         [Required]
@@ -24,6 +29,6 @@ namespace TeisterMask.Data.Models
         [RegularExpression(@"[0-9]{3}-[0-9]{3}-[0-9]{4}")]
         public string Phone { get; set; }
 
-        public ICollection<EmployeeTask> EmployeeTasks { get; set; }
+        public ICollection<EmployeeTask> EmployeesTasks { get; set; }
     }
 }
